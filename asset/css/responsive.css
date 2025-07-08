@@ -1,0 +1,34 @@
+@media only screen and (max-width: 791px) {
+    header{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        width: 100%;
+        
+    }
+    
+}
+@media only screen and (max-width: 791px) {
+    header{
+        min-width: fit-content;
+    }
+    .left-side , .right-side{
+        justify-content: space-between;
+            width: 100%;
+        }
+        .online::after{
+            position: absolute;
+            content: '';
+            width: .5rem;
+            height: .5rem;
+            border: 2px solix #fff;
+            border-radius: 50%;
+            background-color: #41db51;
+            top: 4.5rem;
+            right: 2.2rem;
+        
+        }
+       
+}

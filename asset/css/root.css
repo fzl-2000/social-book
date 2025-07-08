@@ -1,0 +1,36 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+:root{
+    --body-background:#efefef;
+    --background-header:#1879f2;
+    --leftside-bar:#cbdffa;
+}
+
+a {
+    text-decoration: none;
+ 
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+   font-family: "Roboto", sans-serif;
+}
+i{
+    color: black;
+    font-size: 2rem;
+}
+ul{
+    list-style: none;
+}
+.see-more , .close-all{
+    color: #1876f2;
+}
+
+body{
+    background-color: #dadee2;
+}
