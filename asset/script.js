@@ -35,3 +35,17 @@ close.forEach(button=>{
       e.target.textContent="close"
     }
  }
+ /***************arrow-down */
+ let arrowDown=document.querySelector('.arrow-down')
+ console.log(arrowDown)
+let private=document.querySelector(".private")
+arrowDown.addEventListener("click",arrowDownF)
+function arrowDownF() {
+  arrowDown.classList.toggle("bx-caret-up");
+  
+  if(arrowDown.classList.contains("bx-caret-up")){
+    private.style.visibility = "hidden";
+  } else {
+    private.style.visibility = "visible";
+  }
+}
