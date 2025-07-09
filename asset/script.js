@@ -49,3 +49,100 @@ function arrowDownF() {
     private.style.visibility = "visible";
   }
 }
+/************add new post*********** */
+let inputnewpost=document.querySelector(".input-textarea")
+let newposts=document.querySelector(".new-posts")
+let inputfile=document.querySelector(".input-photo")
+inputfilevalue=inputfile.value;
+console.log(inputfilevalue)
+inputfile.addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  
+  reader.onload = function(event) {
+    const img = document.createElement('img');
+    img.src = event.target.result;
+    img.height = 200;
+    document.body.appendChild(img);
+  };
+  
+  reader.readAsDataURL(file);
+});
+
+  function createPost() {
+    let inputcontent = inputnewpost.value.trim();
+    
+    if (inputcontent) {
+        const newPost = document.createElement('div');
+        newPost.className = 'new-post';
+        
+        newPost.innerHTML = `
+            <div class="post-title">
+                <div class="user-post-info">
+                    <div class="user-post">
+                        <img src="./asset/images/profile-pic.png"/>
+                    </div>
+                    <div class="new-post-info">
+                        <p>john nicholson</p>
+                        <span>${getCustomDateTime()}</span>
+                    </div>
+                </div>
+                <i class='bx bx-dots-horizontal-rounded bx-rotate-90' style='color:#c0baba'></i>           
+            </div>
+            <p class="post-info-text">
+                ${inputcontent}
+                <a href="#">#social book</a>
+                <a href="#">social media</a>
+            </p>
+            <div class="post-img">
+                <img src="" alt="">
+            </div>
+            <div class="post-activity">
+                <div class="left-activity-icons">
+                    <div class="activity">
+                        <i class="bx bxs-like bx-tada" style='color:#c0baba'></i>
+                        120
+                    </div>
+                    <div class="activity">
+                        <i class='bx bxs-bookmark bx-tada' style='color:#c0baba'></i>40                                 
+                    </div>
+                    <div class="activity">
+                        <i class='bx bxs-share bx-tada bx-rotate-180' style='color:#c0baba'></i>50                         
+                    </div>
+                </div>
+                <div class="post-profile-icon">
+                    <img src="./asset/images/profile-pic.png"/>
+                    <i class='bx bx-caret-down arrow-down' style='color:#c0baba'></i>
+                </div>
+            </div>
+        `;
+        
+        // اضافه کردن پست جدید به ابتدای لیست
+        newposts.appendChild(newPost);
+        
+        // پاک کردن فیلد ورودی
+        inputnewpost.value = "";
+    }
+}
+
+// رویداد کیبورد
+inputnewpost.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); 
+        createPost();
+    }
+});
+  //to get time
+  function getCustomDateTime() {
+  const now = new Date();
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthName = months[now.getMonth()];
+  const day = now.getDate();
+  const year = now.getFullYear();
+  const hours = String(now.getHours())
+  const minutes = String(now.getMinutes())
+  return ` ${monthName} ${day}, ${year} ${hours}:${minutes}`;
+}
+
+console.log(getCustomDateTime());
+// مثال خروجی: "Saturday, July 13, 2024 14:30:45"
