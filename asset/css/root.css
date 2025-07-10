@@ -9,6 +9,11 @@
     --body-background:#efefef;
     --background-header:#1879f2;
     --leftside-bar:#cbdffa;
+    --body-color:#efefef
+}
+body{
+    background-color: var(--body-color);
+    transition: background .3s;
 }
 
 a {
@@ -34,3 +39,10 @@ ul{
 body{
     background-color: #dadee2;
 }
+
+
+
+
+
+
+

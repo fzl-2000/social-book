@@ -100,6 +100,102 @@ div.left-nav , div.right-nav{
     border: 0;
     font-size: 1rem;
 }  
+.setting-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    background-color: #fff;
+    box-shadow: 0 0 1.px rgb(0, 0,0,.4);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 55px;
+    right: 40px;
+    max-height: 0;
+    transition:max-height .5s ease ;
+}
+.setting-menu-height{
+    max-height: 400px;
+}
+.setting-info{
+    padding: 20px;
+}
+.setting-menu hr{
+    height: 1px;
+    margin: 15px 0;
+    background-color:#9a9a9a;
+}
+.user-profile-setting{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.user-profile-setting a{
+    font-size: 12px;
+    color: #1876f2;
+
+}
+.setting-menu .ul-setting{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.setting-menu .ul-setting li{
+    width: 100%;
+}
+
+.setting-menu .ul-setting li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.ul-setting li a .ul-a-icon{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.2rem;
+}
+.ul-setting li a .ul-a-icon img{
+    width: 40px;
+    height: 40px;
+}
+.ul-setting li a .ul-a-icon p{
+    font-size: 1.2rem;
+    color: #9a9a9a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***************************************container-style************************/
 .conatiner{
     display: flex;
@@ -404,6 +500,16 @@ gap: .5rem;
     flex-direction: column;
     gap: 1rem;
 }
+.load-more{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #9a9a9a;
+    color: #626262;
+    background: transparent;
+    border-radius: 4px;
+}
 
 /***************right-side********************/
 .right-side{
@@ -576,4 +682,10 @@ transform: scale(0);
     color: #626262;
     text-transform: capitalize;
 }
-/************************middle content******************/
+/************************footer content******************/
+.footer{
+    text-align: center;
+    color: #9a9a9a;
+    padding: 10px 0 20px;
+    font-size: 1.5rem;
+}
