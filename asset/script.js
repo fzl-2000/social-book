@@ -2,7 +2,8 @@
 let seeMore = document.querySelectorAll('.see-more')
 let close = document.querySelectorAll(".close-all")
 seeMore.forEach(button => {
-  button.addEventListener('click', function () {
+  button.addEventListener('click', function (e) {
+    e.preventDefault()
     const fullContent = button.parentElement.parentElement.nextElementSibling;
     const currentClipPath = window.getComputedStyle(fullContent).clipPath;
     const isHidden = currentClipPath === "polygon(0px 0px, 100% 0px, 100% 0px, 0px 0px)" ||
@@ -166,6 +167,7 @@ function getCustomDateTime() {
   const minutes = String(now.getMinutes())
   return ` ${monthName} ${day}, ${year} ${hours}:${minutes}`;
 }
+
 let settingMenu=document.querySelector(".setting-menu")
 let userIcon=document.querySelector('.user-icon ');
 userIcon.addEventListener('click',showmenuF)
