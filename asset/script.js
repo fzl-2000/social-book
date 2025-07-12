@@ -97,7 +97,7 @@ function updateUi() {
 
   posts.forEach(post => {
   let  newPost = `
-    <div class ="new-post">
+    <div class ="new-post old-post">
             <div class="post-title">
                 <div class="user-post-info">
                     <div class="user-post">
@@ -108,7 +108,12 @@ function updateUi() {
                         <span>${post.createdAt}</span>
                     </div>
                 </div>
-                <i class='bx bx-dots-horizontal-rounded bx-rotate-90' style='color:#c0baba'></i>           
+                <i class='bx bx-dots-horizontal-rounded bx-rotate-90 delete' style='color:#c0baba'></i>
+                 <div class="delete-link">
+                      <a href="#" class="confirm-delete">
+                           delete
+                      </a> 
+                  </div>            
             </div>
             <p class="post-info-text">
                 ${post.content}
@@ -175,11 +180,21 @@ function showmenuF() {
     settingMenu.classList.toggle("setting-menu-height")
 }
 
+//remove post button
+let postContainer=document.querySelector('.posts-container')
+postContainer.addEventListener('click', function(e) {
+    if (e.target.classList.contains('delete')) {
+        const deleteLink = e.target.nextElementSibling;
+        deleteLink.classList.toggle('remove-post');
+    }
+    if(e.target.classList.contains('confirm-delete')){
+      e.preventDefault();
+      let post=e.target.closest('.old-post')
+      post.remove()
+    }
+ 
 
-
-
-
-
+});
 
 
 

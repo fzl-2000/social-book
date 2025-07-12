@@ -1,7 +1,9 @@
 
-@media  only screen and (max-width: 900) {
-   .left-side , .right-side{
+@media  only screen and (max-width: 900px) {
+   .left-side{
     display: none;
-    background-color: blue;
+   }
+   .right-side{
+      display: none;
    }
 }
