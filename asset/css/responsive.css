@@ -1,9 +1,60 @@
 
-@media  only screen and (max-width: 900px) {
+@media  only screen and (max-width: 1118px) {
    .left-side{
     display: none;
    }
    .right-side{
       display: none;
+   }
+   .middle-side{
+      flex-basis: 100%;
+   }
+   .profile-post-info{
+      flex-wrap: wrap;
+   }
+   .info-col{
+      flex-basis: 100%;
+   }
+}
+@media  only screen and (max-width: 738px) {
+   div.header-container{
+      flex-wrap: wrap;
+   }
+   .right-nav .search-box{
+      display: none;
+   }
+ .right-profile-page .button-parent {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+   }
+ 
+}
+@media  only screen and (max-width: 615px){
+   .story{
+      height: fit-content;
+   }
+   .story-info-members p{
+      font-size: 10px;
+   }
+   .profile-page-info {
+      flex-wrap: wrap;
+   }
+   .right-profile-page{
+      align-items: flex-start;
+      margin-top: 1rem;
+   }
+   .left-profile-page{
+      flex-wrap: wrap;
+   }
+
+}
+@media  only screen and (max-width: 480px){
+   div.left-nav{
+      flex-wrap: wrap;
+   }
+    .ul-left-nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
    }
 }

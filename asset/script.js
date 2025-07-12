@@ -1,4 +1,4 @@
-/******variables****************** */
+/******see more button****************** */
 let seeMore = document.querySelectorAll('.see-more')
 let close = document.querySelectorAll(".close-all")
 seeMore.forEach(button => {
@@ -49,6 +49,8 @@ function arrowDownF() {
     private.style.visibility = "visible";
   }
 }
+
+//creating post
 let newposts = document.querySelector(".new-posts")
 let inputfile = document.querySelector(".input-photo");
 let inputFileVideo=document.querySelector(".input-video")
